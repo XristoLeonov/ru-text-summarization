@@ -9,7 +9,7 @@
 **Ключевые этапы:**
 1.  Сбор, объединение и предобработка данных (более 150 тыс. исходных статей).
 2.  Фильтрация и формирование выборок (~32 тыс. пар "статья-резюме").
-3.  Дообучение (fine-tuning) моделей: `ai-forever/ruT5-base`, `ai-forever/rugpt3small_based_on_gpt2`, `sberbank-ai/rugpt3medium_based_on_gpt2`.
+3.  Дообучение (fine-tuning) моделей: `ai-forever/ruT5-base`, `ai-forever/rugpt3small_based_on_gpt2`, `ai-forever/rugpt3medium_based_on_gpt2`.
 4.  Количественная оценка с использованием метрик: ROUGE, METEOR, BERTScore, BLEU, CHRF++.
 5.  Качественный анализ и сравнение с state-of-the-art контрольными моделями (`IlyaGusev/mbart_ru_sum_gazeta`, `csebuetnlp/mT5_multilingual_XLSum`).
 
