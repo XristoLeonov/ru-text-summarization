@@ -31,20 +31,28 @@
 
 ## Структура Репозитория
 
-*   `data/`: Директория для хранения исходных и обработанных датасетов (может быть исключена из Git через `.gitignore`, если файлы большие).
-    *   `final_data/`: Содержит `train.csv`, `validation.csv`, `test.csv`.
-*   `notebooks/`: Jupyter ноутбуки с кодом для каждого этапа работы.
-    *   `01_data_preparation.ipynb`: Загрузка, очистка, объединение и фильтрация данных.
-    *   `02_train_ruT5_base.ipynb`: Обучение модели ruT5-base.
-    *   `03_train_ruGPT3_small.ipynb`: Обучение модели ruGPT3-small.
-    *   `04_train_ruGPT3_medium.ipynb`: Обучение модели ruGPT3-medium.
-    *   `05_evaluation.ipynb`: Оценка всех моделей, расчет метрик, генерация примеров.
-*   `models/`: Директория для сохранения дообученных моделей (чекпоинтов) (может быть исключена из Git).
-*   `results/`: Результаты оценки, таблицы с метриками, графики.
-*   `src/` (опционально): Вспомогательные скрипты или функции, если они вынесены из ноутбуков.
-*   `README.md`: Этот файл.
-*   `requirements.txt`: Список зависимостей для установки.
-*   `final_course_paper.pdf`: Текст пояснительной записки к курсовой работе (ваш документ).
+*   `compute_metrics/`: Jupyter ноутбуки для расчета метрик и оценки различных чекпоинтов моделей.
+    *   `compute_metrics_ruGPT3medium.ipynb`
+    *   `compute_metrics_ruGPT3small.ipynb`
+    *   `compute_metrics_ruT5.ipynb`
+*   `data/`: Исходные файлы датасетов.
+    *   `gazeta_raw.txt`
+    *   `xl_sum_ru.jsonl`
+*   `final_data/`: Обработанные датасеты, разделенные на обучающую, валидационную и тестовую выборки.
+    *   `test.csv`
+    *   `train.csv`
+    *   `validation.csv`
+*   `fit_models/`: Jupyter ноутбуки, содержащие код для дообучения (fine-tuning) моделей.
+    *   `fit_rugpt3medium.ipynb`
+    *   `fit_rugpt3small.ipynb`
+    *   `fit_ruT5.ipynb`
+*   `metrics/`: CSV файлы с результатами метрик для различных чекпоинтов моделей.
+    *   `metrics_ruGPT3medium1.csv`
+    *   `metrics_ruGPT3medium2.csv`
+    *   `metrics_ruGPT3small.csv`
+    *   `metrics_ruT5.csv`
+*   `final_inference.ipynb`: Jupyter ноутбук для генерации примеров суммаризации с использованием всех моделей.
+*   `prepare_dataset.ipynb`: Jupyter ноутбук для полной подготовки данных (загрузка, очистка, объединение, фильтрация, разделение).
 
 ## Основные Результаты
 
